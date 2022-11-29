@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 
 const AnimalNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="HomeScreen">
+    <Stack.Navigator >
       <Stack.Screen name="HomeScreen" component={Home} options={{headerShown:false,}} />
       <Stack.Screen name="Animals" component={Animals}  />
       <Stack.Screen name="Animal" component={Animal} />
