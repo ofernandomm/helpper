@@ -2,10 +2,10 @@ import React from "react";
 import { View,Text, Button } from "react-native";
 import {styles} from './styles'
 
-const Categories =({navigation}) => {
+const Home =({navigation}) => {
     return(
         <View style={styles.container}>
-            <Text style={styles.title} >Categories</Text>
+            <Text style={styles.title} >Home</Text>
             <Button
             title="go to animals"
             color='green'
@@ -15,4 +15,4 @@ const Categories =({navigation}) => {
     )
 }
 
-export default Categories
+export default Home
