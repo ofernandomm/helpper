@@ -1,17 +1,21 @@
 import React from "react";
-import { View,Text, Button } from "react-native";
+import { View,Text, Button, ScrollView } from "react-native";
 import {styles} from './styles'
+import { Header } from "../../components"
 
 const Home =({navigation}) => {
     return(
-        <View style={styles.container}>
-            <Text style={styles.title} >Home</Text>
-            <Button
-            title="go to animals"
-            color='green'
-            onPress={()=>navigation.navigate('Animals')}>
-            </Button>
-        </View>
+        <ScrollView style={styles.containerScroll}>
+            <View >
+                <Header />
+                <Text style={styles.title} >Home</Text>
+                <Button
+                title="go to animals"
+                color='green'
+                onPress={()=>navigation.navigate('Animals')}>
+                </Button>
+            </View>
+        </ScrollView>
     )
 }
 

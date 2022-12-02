@@ -9,5 +9,8 @@ export const styles = StyleSheet.create({
     title:{
         fontFamily:'Lato-Bold',
         fontSize:20
-    }
+    },
+    containerScroll:{
+        flex:1
+    },
 })
