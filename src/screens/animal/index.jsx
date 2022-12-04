@@ -2,10 +2,11 @@ import React from "react";
 import { View,Text } from "react-native";
 import {styles} from './styles'
 
-const Animal =() => {
+const Animal =({route}) => {
+    const {item} = route.params
     return(
         <View style={styles.container}>
-            <Text>Animal</Text>
+            <Text>{item.id}</Text>
         </View>
     )
 }
