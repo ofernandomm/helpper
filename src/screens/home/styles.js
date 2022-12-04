@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     },
     texto:{
         fontSize:15,
-        paddingBottom:10,
+        paddingBottom:5,
         margin:13
     },
     searchBar:{

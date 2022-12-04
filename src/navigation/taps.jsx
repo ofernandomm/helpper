@@ -27,6 +27,7 @@ const TabNavigator = () => {
         name="User"
         component={User}
         options={{
+          headerShown:false,
           tabBarIcon:({color,size})=>(
             <AntDesign name="user" size={24} color="purple" />
           )

@@ -76,7 +76,7 @@ const Home =({navigation}) => {
                 </View>
                 <Text style={styles.texto} >Estos son los avances más recientes en los casos que hemos atendido gracias a la ayuda de los helppers como tu. ¡Garcias!</Text>
                 <Carousel
-                layout="tinder"
+                layout="default"
                 layoutCardOffset={9}
                 ref={isCarousel}
                 data={PRUEBA}
