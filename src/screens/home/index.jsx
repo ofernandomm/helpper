@@ -65,9 +65,12 @@ const Home =({navigation}) => {
         <ScrollView style={styles.containerScroll}>
             <View >
                 <Header />
+                <View style={styles.searchBarContainer}>
                 <Searchbar
                 placeholder="Search"
+                style={styles.searchBar}
                 />
+                </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.title} >Últimas noticias</Text>
                 </View>
