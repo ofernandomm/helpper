@@ -1,12 +1,16 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text, Button } from "react-native";
 import {styles} from './styles'
 
-const Animal =({route}) => {
+const Animal =({navigation, route}) => {
     const {item} = route.params
     return(
         <View style={styles.container}>
             <Text>{item.id}</Text>
+            <Button
+                title="regresar home"
+                color='green'
+                onPress={()=>navigation.navigate('HomeScreen')}/>
         </View>
     )
 }
