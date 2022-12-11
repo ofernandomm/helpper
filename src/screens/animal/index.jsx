@@ -1,12 +1,14 @@
 import React from "react";
 import { View,Text, Button } from "react-native";
+import { useSelector } from "react-redux";
 import {styles} from './styles'
 
-const Animal =({navigation, route}) => {
-    const {item} = route.params
+const Animal =({navigation}) => {
+    const category=useSelector((state)=>state.category.selected)
+
     return(
         <View style={styles.container}>
-            <Text>{item.id}</Text>
+            <Text>{category.id}</Text>
             <Button
                 title="regresar home"
                 color='green'

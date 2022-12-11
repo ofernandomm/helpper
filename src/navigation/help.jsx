@@ -10,10 +10,7 @@ const AnimalNavigator = () => {
     <Stack.Navigator >
       <Stack.Screen name="HomeScreen" component={Home} options={{headerShown:false,}} />
       <Stack.Screen name="Animals" component={Animals}  />
-      <Stack.Screen name="Animal" component={Animal} options={({route})=>({
-        title: route.params.item.title
-
-      })} />
+      <Stack.Screen name="Animal" component={Animal} />
     </Stack.Navigator>
   );
 };
