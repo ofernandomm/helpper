@@ -17,14 +17,11 @@ const Animals =({navigation}) => {
       navigation.navigate('Animal')
     }
 
-
     const renderItem = ({ item }) => (
         <Item onSelected={onSelected} item={item}  />
       );
 
-
     return(
-
         <SafeAreaView style={styles.container}>
             <Header/>
           <FlatList
