@@ -1,9 +1,18 @@
-import { categoryTypes } from "../types"
+import { cartTypes } from '../types'
 
-const {SELECT_CATEGORY} = categoryTypes
+const {ADD_TO_CART,REMOVE_FROM_CART,CONFIRM_ORDER} =cartTypes
 
+export const addToCart = (item) => ({
+    type: ADD_TO_CART,
+    item,
+});
 
-export const selectCategory = (id) =>({
-    type: 'SELECT_CATEGORY',
-    categoryId:id
-})
+  export const removeFromCart = (id) => ({
+    type: REMOVE_FROM_CART,
+    id,
+});
+
+  export const confirmOrder = (order) => ({
+    type: CONFIRM_ORDER,
+    order,
+});
