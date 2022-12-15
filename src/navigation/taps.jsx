@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AnimalNavigator from './help';
 import { AntDesign } from '@expo/vector-icons'
 
-import { Home, User } from '../screens';
+import { Home, User, Cart } from '../screens';
 
 const Tab= createBottomTabNavigator();
 
@@ -31,7 +31,17 @@ const TabNavigator = () => {
           tabBarIcon:({color,size})=>(
             <AntDesign name="user" size={24} color="purple" />
           )
-          }} 
+          }}
+        />
+        <Tab.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          headerShown:false,
+          tabBarIcon:({color,size})=>(
+            <AntDesign name="user" size={24} color="purple" />
+          )
+          }}
         />
     </Tab.Navigator>
   );
