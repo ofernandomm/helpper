@@ -5,7 +5,8 @@ import { sumTotal } from '../../utils/functions'
 
 const initialState = {
     items:[],
-    total:0
+    total:0,
+    error:null
 }
 
 const cartReducer=(state=initialState, action)=>{
@@ -26,6 +27,25 @@ const cartReducer=(state=initialState, action)=>{
             items: updatedCart,
             total: sumTotal(updatedCart),
           };
+        case  REMOVE_FROM_CART:
+            const filteredcart = state.items.filter((item)=>item.id != action.id );
+            return{
+                ...state,
+                items:filteredcart,
+                total:sumTotal(filteredcart)
+            };
+        case CONFIRM_ORDER:
+            if (action.result) {
+              return {
+                ...state,
+                items: [],
+                total: 0,
+              };
+            }
+            return {
+              ...state,
+              error: action.error,
+            };
         default:
           return state;
       }

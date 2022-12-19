@@ -2,12 +2,16 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AnimalNavigator from './help';
 import { AntDesign } from '@expo/vector-icons'
+import { useSelector } from 'react-redux';
 
 import { Home, User, Cart } from '../screens';
 
 const Tab= createBottomTabNavigator();
 
 const TabNavigator = () => {
+
+  const cart =useSelector((state)=>state.cart.items)
+
   return (
     <Tab.Navigator
     initialRouteName="HomeScreen"
@@ -40,7 +44,8 @@ const TabNavigator = () => {
           headerShown:false,
           tabBarIcon:({color,size})=>(
             <AntDesign name="user" size={24} color="purple" />
-          )
+          ),
+          tabBarBadge:cart.length,
           }}
         />
     </Tab.Navigator>
