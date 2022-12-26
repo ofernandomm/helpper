@@ -41,24 +41,6 @@ const CarouselCardItem = ({ item, index }) => {
   )
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Home =({navigation}) => {
     const isCarousel = React.useRef(null)
     return(
