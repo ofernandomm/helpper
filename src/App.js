@@ -3,7 +3,15 @@ import AppNavigator from './navigation';
 import{useFonts} from 'expo-font'
 import { Provider } from 'react-redux'
 import store from './store';
+import { init } from "./db";
 
+init()
+  .then(() => {
+    console.log("Initialized database");
+  })
+  .catch((err) => {
+    console.log("Initializing db failed.", err);
+  });
 
 
 export default function App() {
